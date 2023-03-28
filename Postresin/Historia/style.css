@@ -1,0 +1,194 @@
+/* El footer tiene un height de 60px cualquier modificación implica cambiar el margin bottom de el body, section y image */
+
+body {
+  margin: 0;
+  font-family: consolas;
+  height: 100%;
+  margin-bottom: 60px;
+}
+
+html{
+  min-height: 100%;
+  position: relative;
+}
+
+.header {
+  background: rgb(34, 29, 29);
+  padding: 20px;
+  color: white;
+  position: fixed;
+  width: 100%;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-logo {
+  margin: 0;
+}
+
+.header-btn {
+  margin-right: 40px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  color: white;
+  border-radius: 10px;
+  font-size: 20px;
+  border: none;
+  background-color: transparent;
+  width: 80px;
+}
+
+.header-btn:hover{
+  cursor: pointer;
+  color: gray;
+}
+
+.header-menu {
+  display: none;
+  padding-bottom: 10px;
+  animation: header_menu_active 1s;
+  font-family: sans-serif;
+}
+
+.content{
+  /* padding-top: 60px; */
+  margin-top: 77px;
+  background-color: aqua;
+  display: flex;
+  float: left;
+  width: 50%;
+  margin-bottom: 60px;
+}
+
+.content h2{
+  text-align: center;
+}
+
+.content p{
+  padding: 0 10px;
+  text-align: justify;
+}
+
+.image{
+  margin-top: 77px;
+  float: left;
+  background-color: blueviolet;
+  display: flex;
+  width: 50%;
+}
+
+@keyframes header_menu_active {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.header-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-right: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-top: 20px;
+}
+
+.header-menu a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer{
+  color: white;
+  background: rgb(34, 29, 29);
+  height: 60px;
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.redes{
+  float: right;
+  height: 60px;
+  display: flex;
+  justify-content: right;
+}
+
+.redes p{
+  display: none;
+  padding-top: 3px;
+  font-family: sans-serif;
+}
+
+.redes ul{
+  padding-left: 2px;
+  padding-right: 15px;
+}
+
+.redes ul li{
+  display: inline-block;
+  margin: 0 5px;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+}
+
+.redes ul li a{
+  display: block;
+  padding: 0 2px;
+  color: white;
+  font-size: 23px;
+  transition: .2s;
+}
+
+.redes ul li .facebook:hover{
+  color: #3b5999;;
+}
+
+.redes ul li .insta:hover{
+  color: #e4405f;
+}
+
+.redes ul li .whatsapp:hover{
+  color: rgb(6, 230, 6);
+}
+
+
+
+/* Adapta la página a la vista de un ordenador */
+@media screen and (min-width: 768px) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header-top  {
+    padding-bottom: 0;
+  }
+
+  .header-menu {
+    padding-top: 0;
+    display: block !important;
+  }
+
+  .header-menu ul {
+    flex-direction: row;
+  }
+
+  .header-btn {
+    display: none;
+  }
+
+  .footer p{
+    display: block;
+  }
+}
